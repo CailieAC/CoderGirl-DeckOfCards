@@ -4,21 +4,41 @@ namespace DeckOfCards
 {
     public class Deck
     {
-        private Random _random;
+        private Random random;
+        private string[] suits = { "Hearts", "Spades", "Clubs", "Diamonds" };
+        private string[] faceValues = { "5", "2", "3", "4", "A" };
+
 
         public Deck()
         {
-            _random = new Random();
+            random = new Random();
 
-            // TODO: Load the card deck with a standard deck of 52 cards.  Use loops, do not hard code each one.
+            Cards = new Card[20];
+            for(int i = 0; i< Cards.Length; i++)
+            {
+                Cards[i] = new Card();
+            }
+
+            int cardCount = 0;
+            for(int i = 0; i < 4; i++)
+            {                
+                for(int j = 0; j < 5; j++)
+                {
+                    Card card = Cards[cardCount];
+                    card.Suit = suits[i];
+                    card.FaceValue = faceValues[j];
+                    cardCount++;
+                }
+            }
         }
 
         public Card[] Cards { get; set; }
 
         public Card Draw()
         {
-            // TODO: Return a random card from the deck.
-            return null;
+            int randomIndex = random.Next(0, 20);
+            Card card = Cards[randomIndex];
+            return card;
         }
     }
 }
