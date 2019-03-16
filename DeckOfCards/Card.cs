@@ -8,8 +8,7 @@
 
         public string GetFullName()
         {
-            string fullName = $"{FaceValue} of {Suit}";
-            return fullName;
+            return $"{FaceValue} of {Suit}";
         }
     }
 }
