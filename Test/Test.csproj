@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DeckOfCards\DeckOfCards.csproj" />
+    <ProjectReference Include="..\DeckOfCards\DeckOfCardsenums.csproj" />
   </ItemGroup>
 
 </Project>
