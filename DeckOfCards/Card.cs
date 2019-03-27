@@ -2,9 +2,14 @@
 {
     public class Card
     {
-        public string FaceValue { get; set; }
+        public FaceValue FaceValue { get; private set; }
+        public Suit Suit { get; private set; }
 
-        public string Suit { get; set; }
+        public Card(FaceValue faceValue, Suit suit)
+        {
+            FaceValue = faceValue;
+            Suit = suit;
+        }
 
         public string GetFullName()
         {
