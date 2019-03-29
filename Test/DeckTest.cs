@@ -78,7 +78,7 @@ namespace Test
 
             for (int i = 1; i <= 10; i++)
             {
-                cards.Add(deck.Draw());
+                cards.Add(deck.PickRandomCard());
             }
 
             var firstCard = cards[0];
