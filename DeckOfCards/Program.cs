@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DeckOfCards
 {
@@ -6,15 +7,11 @@ namespace DeckOfCards
     {
         public static void Main()
         {
-            // Create a deck cards.
             Deck deck = new Deck();
-
-            // Draw a card.
-            var card = deck.Draw();
-
-            // Show the value.
+            
+            var card = deck.PickRandomCard();
+            
             Console.WriteLine(card.GetFullName());
-
             Console.ReadLine();
         }
     }
